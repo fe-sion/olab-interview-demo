@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - '@sentry/cli'
+  - bufferutil
+  - keccak
+  - utf-8-validate

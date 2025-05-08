@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web3 预测市场演示应用
 
-## Getting Started
+一个基于Next.js构建的Web3预测市场应用，展示类似Polymarket的预测市场功能。
 
-First, run the development server:
+## 功能特点
 
+- 使用Next.js和React构建的现代化Web应用
+- 响应式设计，适配各种设备
+- 展示预测市场话题卡片
+- 集成实时API数据
+- 支持自动和手动刷新数据
+
+## 技术栈
+
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+- Axios
+
+## 开始使用
+
+1. 克隆项目
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd web3_demo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 安装依赖
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. 启动开发服务器
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. 打开浏览器访问 [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## 项目结构
 
-To learn more about Next.js, take a look at the following resources:
+```
+.
+├── components/       # React组件
+├── pages/            # Next.js页面
+├── public/           # 静态资源
+├── services/         # API服务
+├── styles/           # 全局样式
+└── types/            # TypeScript类型定义
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API数据源
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+该应用使用以下API获取预测市场数据：
+```
+https://api-monad.olab.xyz/api/v2/topic?status=2&isShow=1&page=1&limit=12&topicType=2&keywords=&sortBy=1&chainId=10143
+```
 
-## Deploy on Vercel
+## 构建生产版本
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
